@@ -18,7 +18,7 @@ var isAnagram = (s, t) => {
   if(s.length !=t.length){
     return false;
   }
-  // we need to instantiate sLetters object.This is my map between letter and number of occurrances
+  // i am instantiatin sLetters object.This is my map between letter and number of occurrances
   const sLetters = {};
 
   // we are gonna iterate through s to built that map
@@ -44,8 +44,8 @@ var isAnagram = (s, t) => {
     /* and after all the iteration of the characters if at the end everything is deleted
     we will get an array from object.keys with a length of zero*/
   }
-  return Object.keys(sLetters).length === 0 /* and if its zero we'll return true */
-                                            /* otherwise we return false*/
+  return Object.keys(sLetters).length === 0 /* in js we can do object.keys and that will return an empyt 
+  array a length of zero,and if its zero we'll return true.  otherwise we return false*/
 }
 
 console.log(isAnagram(s1, t1));

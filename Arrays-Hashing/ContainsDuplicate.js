@@ -20,26 +20,46 @@ Input: nums2 = [1,1,1,3,3,4,3,2,4,2]
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = (nums, numsSet = new Set()) => {
-  // going throug every value in the input array nums
-  for (const num of nums){  /*Time O(N) */
-  // we wanna know is num a duplicate , does this value already exist in our hashset?
-  // and if it does we know that our array contains duplicates. 
-  // so we dont even have to continue through rest of the array.
-  // we can immidiately return true.
-    if (numsSet.has(num))     return true;
 
-    // if it doesnt contain duplicate we are gonna add that value and 
-    // iterate through the rest of the array of nums and then loop would exit
-    numsSet.add(num);       /*Space O(N) */
+// very easy solution
+
+var containsDuplicate = function(nums){
+  nums = nums.sort()
+  // [1,2,3,1] 
+  // [1,1,2,3] this is what sort does then
+
+  for(let i=0; i<nums.length; i++){  /*go th array*/
+    if(nums[i] == nums[i + 1]){   /*if its the same num*/
+      return true;
+    }
   }
-  // then we can return false to indicate that we didnt find any duplicates in the array
   return false;
+}
 
-};
 console.log(containsDuplicate(nums));
 console.log(containsDuplicate(nums1));
 console.log(containsDuplicate(nums2));
+
+// var containsDuplicate = (nums, numsSet = new Set()) => {
+//   // going throug every value in the input array nums
+//   for (const num of nums){  /*Time O(N) */
+//   // we wanna know is num a duplicate , does this value already exist in our hashset?
+//   // and if it does we know that our array contains duplicates. 
+//   // so we dont even have to continue through rest of the array.
+//   // we can immidiately return true.
+//     if (numsSet.has(num))     return true;
+
+//     // if it doesnt contain duplicate we are gonna add that value and 
+//     // iterate through the rest of the array of nums and then loop would exit
+//     numsSet.add(num);       /*Space O(N) */
+//   }
+//   // then we can return false to indicate that we didnt find any duplicates in the array
+//   return false;
+
+// };
+// console.log(containsDuplicate(nums));
+// console.log(containsDuplicate(nums1));
+// console.log(containsDuplicate(nums2));
 
 
 // CONTAINS DUPLICATE : 1, 2, 3 , 1
@@ -57,16 +77,3 @@ console.log(containsDuplicate(nums2));
 // Space O(n) cuz we create a hashSet. Very efficient
 
 
-
-
-// var containsDuplicate = function(nums) {
-//   for(let right = 0; right<nums.length; right++){
-//     for(let left = 0; left<right; left++){
-//       const isDuplicate = nums[left] === nums[right];
-//       if (isDuplicate)
-//       return true;
-//     }
-//   }
-//   return false;
-
-// };
