@@ -34,7 +34,7 @@ var twoSum = function (nums, target) {
   // and we are just wanna add this current number and its index to the map.
   // incase we later do see 7 and we recall that. we just return those indicis.
   for (let i = 0; i < nums.length; i++) {
-    /*loop throug the array */
+    /*loop throug the array and check each value until we find our missing value*/
     let num1 = nums[i];
     let num2 = target - num1; /*number that we're looking 4 is gonna be the target - num1 */
     if (map.has(num2)) {
@@ -47,6 +47,6 @@ var twoSum = function (nums, target) {
   }
 };
 
-console.log(twoSum(nums, target));
+// console.log(twoSum(nums, target));
 console.log(twoSum(nums1, target));
 console.log(twoSum(nums2, target));

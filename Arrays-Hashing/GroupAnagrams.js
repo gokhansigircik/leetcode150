@@ -41,7 +41,7 @@ var groupAnagrams = function(strs){
     }
   }
   /*and lastly in order to get the values out of this object what we can do is we can 
-  return object.values and pass in the map*/
+  return object.values and pass inthe map*/
   return Object.values(map);
 
 }
