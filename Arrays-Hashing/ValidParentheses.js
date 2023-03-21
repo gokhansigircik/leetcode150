@@ -20,7 +20,7 @@ Output: false;
 // for the parentheses we use the stack method **********
 
 var isValid = function (s) {
-  const stack = [];  /*create the stack*/
+  const stack = [];  /* put it in a stack alwyas.. create the stack*/
   const parens = "() {} []"; /* i need this element here to compare our element in the stack too*/
   let i = 0;  /*i am using a variable to store the index
   this way i am not creating a lot of extra space*/
@@ -45,3 +45,28 @@ var isValid = function (s) {
 console.log(isValid(s1));
 console.log(isValid(s2));
 console.log(isValid(s3));
+
+// **************second solution****************
+
+// var isValid =function(s){
+// let bracket = {
+//   '(':')',
+//   '[':']',
+//   '{':'}'
+// }
+// let heap = [];
+
+//   for(let char of s){
+//     if(bracket[char]){
+//       heap.push(bracket[char])
+//     }else{
+//       if(heap.pop() !== char) return false;
+//     }
+//   }
+//   return(heap.length)
+
+// };
+
+// console.log(isValid(s1));
+// console.log(isValid(s2));
+// console.log(isValid(s3));
