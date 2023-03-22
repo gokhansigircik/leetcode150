@@ -20,6 +20,9 @@ Output: true
 // Explanation: s is an empty string "" after removing non-alphanumeric characters.
 // Since an empty string reads the same forward and backward, it is a palindrome.
 
+Input: sm = "beb"
+Output: true
+
 // 1- create regex to replace special charecters with ""
 // 2-create leftIndex variable to kepp track of the left pointer
 // 3-create rigthIndex variable to keep track of the rigth pointer.
@@ -39,8 +42,8 @@ var isPalindrome = function(s){
   */
   // const str=s.replace(/[WI_]/g,'').toLowerCase();  /*this works too */
   // const str = s.split(/[WI_]/).join('').toLowerCase(); 
-  str = s.replace(/[^a-z0-9]/gi,"").toLowerCase();  /*this works too */
-
+  str = s.replace(/[^a-z0-9]/gi,"").toLowerCase(); /*this works too, 
+  gi globally i including lower and upper cases, .toLowerCase() de ekleyebilirsin sona */
 
   let left=0, right=str.length-1;
   while(left<right){
@@ -56,6 +59,7 @@ var isPalindrome = function(s){
 console.log(isPalindrome(s))
 console.log(isPalindrome(ss))
 console.log(isPalindrome(s))
+console.log(isPalindrome(sm))
 
 
 // When you want to find or replace a pattern of characters in a string, you can use something called a regular expression.
