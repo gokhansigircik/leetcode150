@@ -13,6 +13,33 @@ Output: [[2,2,2],[2,2,0],[2,0,1]]
 // Note the bottom corner is not colored 2, because it is not 4-directionally connected to the starting pixel.
 
 // Example 2:
-Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0
+Input: image1 = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0
 Output: [[0,0,0],[0,0,0]]
 // Explanation: The starting pixel is already colored 0, so no changes are made to the image.
+
+var floodFill = function(image, sr, sc, color){
+  const currentColor = image[sr][sc];
+  if (currentColor === color) return image;
+
+  function outOfBounds(row, column){
+    return row < 0 || column < 0 || row >= image.length || column >= image[0].length;
+  }
+  const stack = [[sr, sc]];
+
+  while (stack.length > 0) {
+    const [row, column] = stack.pop();
+
+    if (outOfBounds(row, column) || image[row][column] !== currentColor) continue;
+
+    image[row][column] = color;
+
+    stack.push([row -1, column]);
+    stack.push([row +1, column]);
+    stack.push([row, column - 1]);
+    stack.push([row, column + 1]);
+  }
+  return image;
+}
+
+console.log(floodFill);
+// console.log(floodFill(image1));
