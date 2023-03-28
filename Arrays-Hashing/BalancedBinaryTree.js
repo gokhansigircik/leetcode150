@@ -12,3 +12,24 @@ Output: false
 // Example 3:
 Input: root = []
 Output: true
+
+var isBalanced = function(root){
+  let result = true;
+  function solve(root){
+    if(root == null){
+      return 0;
+    }
+    let left = solve(root.left);
+    let right = solve(root.right);
+
+    if (Math.abs(right, - left) > 1){
+      result = false;
+    }
+    return Math.max(left, right) + 1;
+  }
+  solve(root);
+  return result;
+}
+console.log(isBalanced(root));
+// console.log(isBalanced(root2));
+// console.log(isBalanced(root3));
