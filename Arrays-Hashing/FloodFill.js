@@ -42,4 +42,4 @@ var floodFill = function(image, sr, sc, color){
 }
 
 console.log(floodFill);
-// console.log(floodFill(image1));
+console.log(floodFill(image1));
