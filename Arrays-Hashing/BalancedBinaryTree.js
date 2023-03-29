@@ -22,10 +22,10 @@ var isBalanced = function(root){
     let left = solve(root.left);
     let right = solve(root.right);
 
-    if (Math.abs(right, - left) > 1){
-      result = false;
-    }
-    return Math.max(left, right) + 1;
+    if (Math.abs(right, - left) > 1){ //CHECKING IF THE TREE BALANCED OR NOT
+      result = false; //UNBALANCED
+    } 
+    return Math.max(left, right) + 1; //HEIGHT OF THE TREE
   }
   solve(root);
   return result;
