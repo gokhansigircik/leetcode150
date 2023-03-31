@@ -14,22 +14,22 @@ Output: false
 Input: ransomNote = "aa", magazine = "aab"
 Output: true
 
-function checkMagazine(magazine, note){
-  let ransom = true;
+var canConstruct = function(ransomNote, magazine) {
+  let ransomNote = true;
   let map = {};
   for (let word of magazine){
     map[word] = (map[word] || 0) + 1;
   }
-  for (let word of note){
+  for (let word of ransomNote){
     map[word] = (map[word] || 0) - 1;
   }
   for (let key in map){
     if(map[key] < 0){
-      ransom = false;
+      ransomNote = false;
       break
     }
   }
-  if (ransom){
+  if (ransomNote){
     console.log("Yes")
   }else{
     console.log("No")
