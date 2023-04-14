@@ -20,4 +20,4 @@ for (let i = 2; i < num; i++){
 return true
 }
 console.log(isPrime(11)); // true - prime number 
-console.log(isPrime(8)); // false - not a prime number 
+console.log(isPrime(8)); // false - not a prime number
