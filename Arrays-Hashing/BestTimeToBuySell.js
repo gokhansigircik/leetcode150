@@ -43,7 +43,7 @@ var MaxProfit = function(prices){
     const profit= sellPrice-minBuyPrice /*best possible profit */
     max=Math.max(max, profit) /* if i encounter profit larger then my max value i will update my max value*/
 
-    // when would be the best time to buy? given that we are to sell on day i
+    // when would be the best time to buy? given that we are to sell on dayi
     minBuyPrice=Math.min(minBuyPrice, prices[i])
 
   }
