@@ -51,4 +51,4 @@ var MaxProfit = function(prices){
 };
 
 console.log(MaxProfit(prices))
-console.log(MaxProfit(prices1))
+console.log(MaxProfit(prices1));
