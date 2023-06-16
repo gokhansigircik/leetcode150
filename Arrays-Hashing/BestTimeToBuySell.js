@@ -50,5 +50,5 @@ var MaxProfit = function(prices){
   return max
 };
 
-console.log(MaxProfit(prices))
+console.log(MaxProfit(prices));
 console.log(MaxProfit(prices1));
