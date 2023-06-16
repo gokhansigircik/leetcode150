@@ -31,5 +31,5 @@ var isBalanced = function(root){
   return result;
 }
 console.log(isBalanced(root));
-// console.log(isBalanced(root2));
+console.log(isBalanced(root2));
 console.log(isBalanced(root3));
