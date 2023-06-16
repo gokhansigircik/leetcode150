@@ -32,4 +32,4 @@ var isBalanced = function(root){
 }
 console.log(isBalanced(root));
 // console.log(isBalanced(root2));
-// console.log(isBalanced(root3));
+console.log(isBalanced(root3));
